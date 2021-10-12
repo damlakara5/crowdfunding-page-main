@@ -1,0 +1,382 @@
+*,
+*::after,
+a::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 80%;
+}
+body {
+  font-family: "Commissioner", sans-serif;
+  position: relative;
+  background-color: hsla(0, 2%, 88%, 0.87);
+  height: 100%;
+}
+
+.header {
+  background-image: url(/images/image-hero-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40%;
+  z-index: 1;
+}
+
+/* .head-pic {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 250%;
+  background-size: cover;
+} */
+
+.nav {
+  position: absolute;
+  top: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 10rem;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  margin-left: 1rem;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
+
+.container {
+  display: grid;
+  width: 40%;
+  position: relative;
+  transform: translate(70%, 35%);
+  grid-template-rows: 20% 15% 1fr;
+  grid-row-gap: 5%;
+  z-index: 10;
+  padding-bottom: 15rem;
+  height: 50%;
+}
+
+.box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.box--1,
+.box--2 {
+  text-align: center;
+}
+
+.box--2 {
+  justify-content: center;
+}
+h1 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.btn {
+  background-color: hsl(176, 72%, 28%);
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  padding: 0 1.5rem;
+  cursor: pointer;
+}
+
+.bookmark {
+  display: flex;
+  list-style: none;
+  background-color: hsl(0, 5%, 80%);
+  border-radius: 20px;
+  padding: 0 1rem 0 0;
+  align-items: center;
+}
+
+.bookmark__link:link,
+.bookmark__link:visited {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(0, 1%, 39%);
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
+
+.icon-bookmark {
+  width: 3em;
+  height: 3em;
+  margin-right: 0.75rem;
+  border-radius: 50%;
+  shape-outside: circle();
+}
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  padding: 0;
+  margin: 0;
+}
+
+.value {
+  padding: 0;
+  margin: 0;
+  color: hsl(0, 0%, 51%);
+  float: left;
+}
+
+.value:not(.last-child)::after {
+  content: "";
+  display: inline-block;
+  border-right: 1px solid rgba(0, 0, 0, 0.377);
+  height: 100%;
+  width: 100%;
+  margin-right: 2rem;
+  margin-top: -3.4rem;
+}
+
+.value span {
+  font-weight: 700;
+  font-size: 170%;
+  color: black;
+}
+
+.part {
+  border: 1px solid rgba(31, 31, 31, 0.24);
+  padding: 1rem;
+  margin: 1rem 0;
+  list-style: none;
+}
+
+.part1 {
+  margin-top: 1.5rem;
+}
+p {
+  margin-top: 1rem;
+  color: hsl(0, 0%, 51%);
+}
+
+.info {
+  color: hsl(176, 50%, 47%);
+}
+
+.bottom,
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top {
+  margin-bottom: 2rem;
+}
+
+.bottom {
+  margin-top: 2rem;
+  color: hsl(0, 0%, 51%);
+}
+
+.bottom button {
+  padding: 0.5rem 1rem;
+}
+
+.left {
+  font-weight: 700;
+  font-size: 180%;
+  color: black;
+}
+
+.unactive-bottom {
+  background-color: hsl(0, 0%, 48%);
+}
+
+.unactive {
+  color: hsl(0, 0%, 48%);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  background-color: #fff;
+  z-index: 100000;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 100;
+}
+.modal-box {
+  padding: 3rem;
+}
+.modal-box p {
+  padding-bottom: 2rem;
+}
+
+.close {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  fill: black;
+  cursor: pointer;
+}
+
+.selected {
+  display: flex;
+  margin-bottom: 1rem;
+  margin-right: 26rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+.selected:hover,
+.selected:active {
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(176, 50%, 47%);
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
+
+.selected span {
+  margin-left: 1rem;
+}
+.circle {
+  position: absolute;
+  left: 6rem;
+}
+
+.x {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-count {
+  margin: 0;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.enter {
+  position: relative;
+  justify-content: space-between;
+  border-top: 1px solid rgba(31, 31, 31, 0.24);
+  padding: 0.5rem 2rem;
+  width: 109%;
+  left: -3rem;
+}
+
+.enter input {
+  border-radius: 30px;
+  border: 1px solid hsl(176, 50%, 47%);
+  width: 40%;
+  padding: 0.7rem 0;
+}
+
+.enter input:focus {
+  outline: none;
+}
+
+label {
+  position: absolute;
+  top: 26%;
+  left: 5%;
+  color: hsl(0, 0%, 51%);
+}
+
+.enter button {
+  width: 40%;
+  padding: 0.7rem 0;
+}
+
+.enter-active {
+  border: 1px solid hsl(176, 50%, 47%);
+}
+
+.clicked {
+  color: hsl(176, 50%, 47%);
+}
+
+.input {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+}
+
+.success-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+  background-color: #fff;
+  padding: 1rem 2.5rem;
+  z-index: 1000000;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+
+  grid-template-rows: 30% 70%;
+  color: hsl(0, 0%, 51%);
+  text-align: center;
+}
+
+.success-logo {
+  margin: 2rem auto;
+}
+
+h2 {
+  text-align: center;
+  margin: 2rem 0;
+  color: #000;
+}
+
+.btn--completed {
+  display: block;
+  padding: 0.7rem 2rem;
+  margin: 2rem auto;
+}
